@@ -1,0 +1,9 @@
+[Unit]
+Description=ASUS Vivobook OOBE mode for RGB keyboard backlight
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/foo-cleanup
+
+[Install]
+WantedBy=multi-user.target
