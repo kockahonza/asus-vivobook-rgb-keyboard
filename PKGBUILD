@@ -7,23 +7,18 @@
 pkgname=asus-vivobook-rgb-keyboard
 pkgver=1
 pkgrel=1
-epoch=
-pkgdesc="Enters an OOBE mode to enable switching modes of the RGB keyboard backlight on ASUS Vivobook S 16"
+pkgdesc="Enables OOBE mode for RGB keyboard control on ASUS Vivobook S 16"
 arch=(any)
-url=""
-license=('GPL')
-depends=(systemd)
-install=
-source=("$pkgname-$pkgver.tar.gz"
-        "$pkgname-$pkgver.patch")
-
-build() {
-	cd "$pkgname-$pkgver"
-	./configure --prefix=/usr
-	make
-}
+url="https://github.com/kockahonza/asus-vivobook-rgb-keyboard"
+license=("GPL")
+depends=("systemd" "bash")
+source=("asus-vivobook-rgb-keyboard.service" "asus-vivobook-rgb-keyboard.sh")
 
 package() {
-	cd "$pkgname-$pkgver"
-	make DESTDIR="$pkgdir/" install
+    mkdir -p "${pkgdir}/usr/bin"
+    cp "${srcdir}/asus-vivobook-rgb-keyboard.sh" "${pkgdir}/usr/bin/"
+    chmod +x "${pkgdir}/usr/bin/asus-vivobook-rgb-keyboard.sh"
+
+    mkdir -p "${pkgdir}/etc/systemd/system"
+    cp "${srcdir}/asus-vivobook-rgb-keyboard.service" "${pkgdir}/usr/bin/"
 }

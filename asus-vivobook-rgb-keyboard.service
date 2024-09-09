@@ -3,7 +3,7 @@ Description=ASUS Vivobook OOBE mode for RGB keyboard backlight
 
 [Service]
 Type=oneshot
-ExecStart=/usr/sbin/foo-cleanup
+ExecStart=/usr/bin/asus-vivobook-rgb-keyboard.sh
 
 [Install]
 WantedBy=multi-user.target
