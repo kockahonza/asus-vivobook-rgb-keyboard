@@ -1,11 +1,5 @@
 post_install() {
 	systemctl daemon-reload
-	systemctl enable asus-vivobook-rgb-keyboard.service
-	systemctl start asus-vivobook-rgb-keyboard.service
-}
-
-pre_remove() {
-	systemctl disable asus-vivobook-rgb-keyboard.service
 }
 
 post_remove() {
