@@ -1,5 +1,6 @@
 post_install() {
 	systemctl daemon-reload
+    echo "You need to enable and/or start the asus-vivobook-rgb-keyboard.service for the package to work."
 }
 
 post_remove() {
