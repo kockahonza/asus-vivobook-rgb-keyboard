@@ -1,4 +1,4 @@
-Little systemd service to set up hardware on ASUS Vivobook S 16 (and perhaps other laptops) so that the RGB keyboard backlight can be controlled via the Fn+F4 function key.
+Little systemd service to set up hardware on ASUS Vivobook S 16 (and perhaps other laptops including the Zenbook S 16 and Vivobook S 15) so that the RGB keyboard backlight can be controlled via the Fn+F4 function key.
 This is based on the solution from [here](https://bbs.archlinux.org/viewtopic.php?pid=2194801#p2194801) and I don not really understand how it works I just bundled it together.
 
 To install on Arch, get the source and open a terminal there.
